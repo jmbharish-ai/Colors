@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Colors</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            #colors{
+                width: 400px;
+
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+            }
+            .outer{
+                width: 40px; height: 40px;
+                background-color: red;
+                border-radius: 0px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .color{
+                width: 30px; height: 30px;
+                border: 2px solid black; border-radius: 15px;
+
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="colors"></div>
+        <script type="module">
+            import {Colors} from './Colors.js';
+
+            const colors=[
+                Colors.color("0|2'", "red", "0|4'", "", "0"),
+                Colors.color("1", "red", "0|2'", "yellow", "0|4'"),
+                Colors.color("0|2'", "red", "0|2'", "yellow", "0|2'"),
+                Colors.color("0|2'", "red", "1", "blue", "1"),
+                Colors.color("1", "green", "0|4'", "blue", "0|2'"),
+                Colors.color("1", "red", "1", "blue", "0|2'"),
+                Colors.color("1", "red", "0|2'", "yellow", "1"),
+                Colors.color("0|2'", "red", "1", "yellow", "1"),
+                Colors.color("0|2'", "red", "0|2'", "", "0"),
+                Colors.color("0|2'", "red", "1", "blue", "0|2'"),
+                Colors.color("0|2'", "", "0", "", "0"),
+                Colors.color("1", "red", "1", "", "0"),
+                Colors.color("1", "red", "0|2'", "", "0"),
+                Colors.color("1", "green", "1", "blue", "1"),
+                Colors.color("1", "red", "1", "blue", "1"),
+                Colors.color("1", "", "0", "blue", "1"),
+                Colors.color("0|2'", "green", "0|2'", "blue", "0|4'"),
+                Colors.color("1", "", "0", "", "0"),
+                Colors.color("1", "green", "0|2'", "blue", "1"),
+                Colors.color("0|2'", "green", "0|2'", "blue", "1"),
+                Colors.color("1", "", "0", "yellow", "1"),
+                Colors.color("1", "red", "0|2'", "blue", "1"),
+                Colors.color("0|2'", "green", "0|4'", "blue", "0|2'"),
+                Colors.color("0|2'", "green", "1", "blue", "1"),
+                Colors.color("1", "red", "1", "yellow", "1"),
+                Colors.color("1", "green", "0|1'.3", "blue", "1"),
+                Colors.color("0|2'", "red", "1", "", "0"),
+                Colors.color("0", "", "0", "", "0"),
+                Colors.color("1", "", "0", "blue", "0|2'"),
+                Colors.color("1", "red", "0|2'", "blue", "0|4'"),
+                Colors.color("1", "red", "0|4'", "", "0"),
+                Colors.color("0|2'", "green", "0|1'.3", "blue", "1"),
+                Colors.color("0|2'", "red", "0|2'", "yellow", "0|4'"),
+                Colors.color("0|2'", "", "0", "blue", "0|2'"),
+                Colors.color("1", "red", "0|2'", "yellow", "0|2'"),
+                Colors.color("0|2'", "red", "0|2'", "blue", "0|4'"),
+                Colors.color("1", "red", "0|4'", "blue", "0|2'"),
+                Colors.color("0|2'", "", "0", "yellow", "1"),
+                Colors.color("0|2'", "red", "0|2'", "yellow", "1"),
+                Colors.color("1", "green", "1", "", "0"),
+                Colors.color("1", "green", "0|2'", "blue", "0|4'"),
+                Colors.color("0|2'", "red", "0|4'", "blue", "0|2'"),
+                Colors.color("0|2'", "green", "1", "", "0"),
+
+                Colors.color("1", "green", "0|2'", "yellow", "0|2'"),
+                Colors.color("0|2'.1.2'", "red", "1", "", "0"),
+                Colors.color("0|8'", "red", "1", "", "0"),
+                Colors.color("1", "red", "1", "yellow", "0|1'.3")
+            ];
+            const colorsDiv=document.getElementById("colors");
+
+            for(var i=0; i<colors.length; i++){
+                var color=document.createElement("div");
+                colorsDiv.appendChild(color);
+                color.className="outer";
+
+                var button=document.createElement("button");
+                color.appendChild(button);
+                button.className="color";
+                button.style.backgroundColor=colors[i];
+            }
+        </script>
+    </body>
+</html>
