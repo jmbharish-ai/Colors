@@ -8,41 +8,41 @@ export class Colors{
 
         if(redGreenValue.greaterEqual(blueYellowValue)){
             if(redGreen=="red"){
-                green=green.subtraction(redGreenValue);
-                blue=blue.subtraction(redGreenValue);
+                RGB_green=RGB_green.subtraction(redGreenValue);
+                RGB_blue=RGB_blue.subtraction(redGreenValue);
                 if(blueYellow=="blue"){
-                    blue=blue.addition(blueYellowValue);
+                    RGB_blue=RGB_blue.addition(blueYellowValue);
                 }else if(blueYellow=="yellow"){
                     var modified=blueYellow.division(new Fraction("2"));
-                    green=green.addition(modified);
+                    RGB_green=RGB_green.addition(modified);
                 }
             }else if(redGreen=="green"){
-                red=red.subtraction(redGreenValue);
-                blue=blue.subtraction(redGreenValue);
+                RGB_red=RGB_red.subtraction(redGreenValue);
+                RGB_blue=RGB_blue.subtraction(redGreenValue);
                 if(blueYellow=="blue"){
-                    blue=blue.addition(blueYellowValue);
+                    RGB_blue=RGB_blue.addition(blueYellowValue);
                 }else if(blueYellow=="yellow"){
                     var modified=blueYellowValue.division(new Fraction("2"));
-                    red=red.addition(modified);
+                    RGB_red=RGB_red.addition(modified);
                 }
             }
         }else if(blueYellowValue.greaterEqual(redGreenValue)){
             if(blueYellow=="blue"){
-                red=red.subtraction(blueYellowValue);
-                green=green.subtraction(blueYellowValue);
+                RGB_red=RGB_red.subtraction(blueYellowValue);
+                RGB_green=RGB_green.subtraction(blueYellowValue);
                 if(redGreen=="red"){
-                    red=red.addition(redGreenValue);
+                    RGB_red=RGB_red.addition(redGreenValue);
                 }else if(redGreen=="green"){
-                    green=green.addition(redGreenValue);
+                    RGB_green=RGB_green.addition(redGreenValue);
                 }
             }else if(blueYellow=="yellow"){
-                blue=blue.subtraction(blueYellowValue);
+                RGB_blue=RGB_blue.subtraction(blueYellowValue);
                 if(redGreen=="red"){
                     var modified=redGreenValue.division(new Fraction("2"));
-                    green=green.subtraction(modified);
+                    RGB_green=RGB_green.subtraction(modified);
                 }else if(redGreen=="green"){
                     var modified=redGreenValue.division(new Fraction("2"));
-                    red=red.subtraction(modified);
+                    RGB_red=RGB_red.subtraction(modified);
                 }
             }
         }
