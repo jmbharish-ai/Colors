@@ -13,7 +13,7 @@ export class Colors{
                 if(blueYellow=="blue"){
                     RGB_blue=RGB_blue.addition(blueYellowValue);
                 }else if(blueYellow=="yellow"){
-                    var modified=blueYellow.division(new Fraction("2"));
+                    var modified=blueYellowValue.division(new Fraction("2"));
                     RGB_green=RGB_green.addition(modified);
                 }
             }else if(redGreen=="green"){
