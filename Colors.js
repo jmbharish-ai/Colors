@@ -6,6 +6,8 @@ export class Colors{
         var RGB_green=new Fraction("1");
         var RGB_blue=new Fraction("1");
 
+        redGreenValue=new Fraction(redGreenValue);
+        blueYellowValue=new Fraction(blueYellowValue);
         if(redGreenValue.greaterEqual(blueYellowValue)){
             if(redGreen=="red"){
                 RGB_green=RGB_green.subtraction(redGreenValue);
