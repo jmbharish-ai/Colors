@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Colors</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            #colors{
+                width: 400px;
+
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+            }
+            .outer{
+                width: 40px; height: 40px;
+                background-color: red;
+                border-radius: 0px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .color{
+                width: 30px; height: 30px;
+                border: 2px solid black; border-radius: 15px;
+
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="colors"></div>
+        <script type="module">
+            import {Colors} from './Colors.js';
+
+            const colors=[
+                "rgb(127, 95, 95)",
+                "rgb(255, 159, 127)",
+                "rgb(127, 95, 63)",
+                "rgb(127, 0, 127)",
+                "rgb(127, 191, 255)",
+                "rgb(255, 0, 127)",
+                "rgb(255, 191, 0)",
+                "rgb(127, 63, 0)",
+                "rgb(127, 63, 63)",
+                "rgb(127, 0, 63)",
+                "rgb(127, 127, 127)",
+                "rgb(255, 0, 0)",
+                "rgb(255, 127, 127)",
+                "rgb(0, 255, 255)",
+                "rgb(255, 0, 255)",
+                "rgb(0, 0, 255)",
+                "rgb(63, 127, 95)",
+                "rgb(255, 255, 255)",
+                "rgb(0, 127, 255)",
+                "rgb(0, 63, 127)",
+                "rgb(255, 255, 0)",
+                "rgb(127, 0, 255)",
+                "rgb(63, 95, 127)",
+                "rgb(0, 127, 127)",
+                "rgb(255, 127, 0)",
+                "rgb(0, 191, 255)",
+                "rgb(127, 0, 0)",
+                "rgb(0, 0, 0)",
+                "rgb(127, 127, 255)",
+                "rgb(255, 127, 191)",
+                "rgb(255, 191, 191)",
+                "rgb(0, 95, 127)",
+                "rgb(127, 79, 63)",
+                "rgb(63, 63, 127)",
+                "rgb(255, 191, 127)",
+                "rgb(127, 63, 95)",
+                "rgb(191, 127, 255)",
+                "rgb(127, 127, 0)",
+                "rgb(127, 95, 0)",
+                "rgb(0, 255, 0)",
+                "rgb(127, 255, 191)",
+                "rgb(95, 63, 127)",
+                "rgb(0, 127, 0)",
+                "rgb(255, 223, 127)",
+                "rgb(127, 111, 63)",
+                "rgb(191, 255, 127)",
+                "rgb(95, 0, 0)",
+                "rgb(31, 0, 0)",
+                "rgb(255, 95, 0)",
+                "rgb(239, 223, 255)",
+                "rgb(0, 0, 127)",
+                "rgb(127, 255, 127)",
+                "rgb(255, 255, 127)",
+                "rgb(255, 255, 191)",
+                "rgb(0, 63, 0)",
+                "rgb(255, 127, 255)",
+                "rgb(0, 191, 0)",
+                "rgb(0, 223, 0)",
+                "rgb(223, 0, 112)"
+            ];
+            const colorsDiv=document.getElementById("colors");
+
+            for(var i=0; i<colors.length; i++){
+                var color=document.createElement("div");
+                colorsDiv.appendChild(color);
+                color.className="outer";
+
+                var button=document.createElement("button");
+                color.appendChild(button);
+                button.className="color";
+                button.style.backgroundColor=colors[i];
+            }
+        </script>
+    </body>
+</html>
